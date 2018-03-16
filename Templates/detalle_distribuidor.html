@@ -1,0 +1,14 @@
+{% extends 'detalle.html' %}
+{% load staticfiles %}
+
+{% block titulo %}
+	{{ datos.nombre }}
+
+{% endblock %}
+{% block titulop %}
+	{{ datos.nombre }}
+{% endblock %}
+{% block contenido %}
+	<img src="/media/{{ datos.logo }}"/>
+	<a href="{% url 'videojuego' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+{% endblock %}

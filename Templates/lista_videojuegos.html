@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block estilosp %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lista.css' %}">
+{% endblock %}
+{% block titulo %}
+	Lista Videojuegos
+{% endblock %}
+{% block titulop %}
+{% endblock %}
+
+{% block contenido %}
+	<h2 class="titulo">Lista de Videojuegos</h2>
+	<a href="{% url 'agregar_videojuego' %}"> <input type="submit" value="Agregar Videojuego" id="agregar"></a>
+	<table class="listap">
+        <thead>
+          <tr>
+            <th class="titulov center-align">Videojuego</th>
+            <th class="titulov center-align">Portada</th>
+          </tr>
+        </thead>
+
+        <tbody class="contenidov">
+            {% for p in lvideojuego %}
+          <tr>
+      			<td class="center-align"><a class="detalles" href="{% url 'videojuegos_detalle' id_v=p.id %}">{{ p.nombre }}</a></td>
+      			<td class="center-align"><img src="/media/{{ p.portada }}"/></td>
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      
+
+{% endblock %}

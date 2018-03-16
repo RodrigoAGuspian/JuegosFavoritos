@@ -1,0 +1,30 @@
+.titulo{
+	margin-left: 10%;
+	color: #0096D2;
+	text-shadow: 2px 2px #94C0D2;
+}
+
+.listap{
+	width: 80%;
+	font-family: "Verdana", verdana, serif;
+	font-size: 200%;
+	margin-left: 10%;
+
+}
+.titulov{
+	background: linear-gradient(to bottom, rgba(0,178,168,1), rgba(255,255,255,1));
+	font-weight: bold;
+}
+.contenidov{
+	background: linear-gradient(to top, rgba(18,121,251,1), rgba(255,255,255,1));
+	text-align: center;
+}
+.detalles{
+	color: #2F08C1;
+}
+#agregar{
+	margin: 0% 0% 1% 82.4%;
+}
+img{
+	width: 100px;
+}

@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/materialize.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/detalle.css' %}">
+	{% block estilosp %}
+
+	{% endblock %}
+	<meta charset="utf-8">
+	
+	<title>
+		{% block titulo %}
+
+		{% endblock %}
+	</title>
+</head>
+<body>
+		<header>
+			{% block titulop %}
+
+			{% endblock %}
+		</header>
+
+		{% block contenido %}
+		
+		{% endblock%}
+</body>
+</html>	

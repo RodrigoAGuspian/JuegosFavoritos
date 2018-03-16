@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block estilosp %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lista.css' %}">
+{% endblock %}
+{% block titulo %}
+	Lista Distribuidor
+{% endblock %}
+{% block titulop %}
+{% endblock %}
+
+{% block contenido %}
+	
+  <h2 class="titulo">Lista de Distribuidores</h2>
+  <a href="{% url 'agregar_distribuidor' %}"> <input type="submit" value="Agregar Distribuidor" id="agregar"></a>
+	<table class="listap">
+        <thead>
+          <tr>
+            <th class="titulov center-align">Distribuidor</th>
+          </tr>
+        </thead>
+
+        <tbody class="contenidov">
+        <tr>
+        {% for p in ldistribuidor %}
+			<td class="center-align"><a class="detalles" href="{% url 'distribuidor_detalle' id_dis=p.id %}">{{ p.nombre }}</td>
+			
+        </tr>
+        {% endfor %}
+    	</tbody>
+    </table>
+
+{% endblock %}

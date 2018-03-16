@@ -1,0 +1,17 @@
+{% extends 'detalle.html' %}
+{% load staticfiles %}
+
+{% block titulo %}
+	{{ datos.nombre }}
+
+{% endblock %}
+{% block titulop %}
+	{{ datos.nombre }}
+{% endblock %}
+{% block contenido %}
+	<div id="contenido">
+		<p><label class="etiquetad"> Descripción: </label>{{ datos.descripcion }}</p>
+	</div>
+
+	<a href="{% url 'videojuego' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+{% endblock %}

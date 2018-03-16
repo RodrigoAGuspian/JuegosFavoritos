@@ -1,0 +1,71 @@
+body{
+	font-family: "Verdana", verdana, serif;
+}
+
+form{
+	display: block;
+	margin: 0 auto;
+	text-align: left;
+	border: solid 1px;
+	border-radius: 20px 30px;
+	box-shadow: 5px 5px grey;
+	background: linear-gradient(45deg, #00C9FF, #1700FF);
+	color: white;
+	text-shadow: 2px 2px 5px black;
+
+}
+
+label{
+	margin-top: 1%;
+	margin-left: 2%;
+	margin-right: 10%; 
+	width: auto;
+}
+input{
+	margin-top: -1%;
+	margin-left: 12%;
+	display: block;
+	width: auto;	
+}
+select{
+	margin-top: -1%;
+	margin-left: 12%;
+	display: block;
+	width: auto;	
+}
+textarea{
+	margin-top:  -1.5%;
+	margin-left: 12%;
+	display: block;
+	width: auto;	
+}
+
+#enviar{
+	margin-top: 0.1%;
+	color: black;
+	font-family: "Verdana", verdana, serif;
+	background: linear-gradient(75deg, #00FFBD, #18D364);
+	border-color: black;
+	font-size: 120%;
+	margin-top: 0px;
+	margin-left: 2%;
+	margin-bottom: 5%;
+	display: inline;
+	width: 7%;
+	border-radius: 7px;
+	border: 1.5px solid;
+
+}
+#regresar{
+	margin-top: 5%;
+	color: black;
+	font-family: "Verdana", verdana, serif;
+	background-color: #00B9FA;
+	font-size: 150%;
+	position: absolute;
+	font-size: 36px ;
+	bottom: 0; 
+	right: 0;
+	display: inline;
+	border: 1.2px solid;
+}

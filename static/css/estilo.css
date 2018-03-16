@@ -1,0 +1,16 @@
+nav ul li{
+	margin-bottom: 1%;
+	font-style: italic;
+	margin: 0% 0%;
+}
+nav ul li a{
+	font-size: 150%;
+	text-align:center;
+}
+#navegs{
+	background-color: blue;
+}
+nav ul{
+	margin-left: 2%;
+}
+

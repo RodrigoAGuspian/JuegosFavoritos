@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/agregar.css' %}">
+	{% block estilosp %}
+
+	{% endblock %}
+	<meta charset="utf-8">
+	
+	<title>
+		{% block titulo %}
+
+		{% endblock %}
+	</title>
+</head>
+<body>
+		<header>
+			{% block titulop %}
+
+			{% endblock %}
+		</header>
+		<div id="caja_formulario">
+			{% block contenido %}
+			
+			{% endblock%}
+		</div>
+
+</body>
+</html>	

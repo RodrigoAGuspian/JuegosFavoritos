@@ -1,0 +1,67 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/materialize.css' %}">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+	{% block estilosp %}
+
+	{% endblock %}
+	<meta charset="utf-8">
+	
+	<title>
+		{% block titulo %}
+
+		{% endblock %}
+	</title>
+</head>
+<body>
+		<header>
+			{% block titulop %}
+
+			{% endblock %}
+		</header>
+
+		<nav class="nav-extended">
+		    <div class="nav-wrapper" id="navegs">
+		      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <ul id="nav-mobile" class="center hide-on-med-and-down">
+		        <li><a href="{% url 'index' %}">Página Principal</a></li>
+				<li><a href="{% url 'videojuego' %}">Videojuegos</a></li>
+				<li><a href="{% url 'genero' %}">Género</a></li>
+				<li><a href="{% url 'desarrollador' %}">Desarrollador</a></li>
+				<li><a href="{% url 'distribuidor' %}">Distribuidor</a></li>
+				<li><a href="{% url 'plataforma' %}">Plataforma</a></li>
+		      </ul>
+		      <ul class="center side-nav" id="mobile-demo">
+		        <li><a href="{% url 'index' %}">Página Principal</a></li>
+				<li><a href="{% url 'videojuego' %}">Videojuegos</a></li>
+				<li><a href="{% url 'genero' %}">Género</a></li>
+				<li><a href="{% url 'desarrollador' %}">Desarrollador</a></li>
+				<li><a href="{% url 'distribuidor' %}">Distribuidor</a></li>
+				<li><a href="{% url 'plataforma' %}">Plataforma</a></li>
+		      </ul>
+		    </div>
+		</nav>
+
+		{% block contenido %}
+		
+		{% endblock%}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+		$('.button-collapse').sideNav({
+	      menuWidth: 300,
+	      edge: 'right', 
+	      closeOnClick: true, 
+	      draggable: true, 
+	      onOpen: function(el) { 
+	      onClose: 
+	    }
+	 	$('.button-collapse').sideNav('show');
+	 	
+	</script>
+</body>
+
+</html>	

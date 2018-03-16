@@ -1,0 +1,29 @@
+{% extends 'detalle.html' %}
+{% load staticfiles %}
+
+{% block titulo %}
+	{{ datos.nombre }}
+
+{% endblock %}
+{% block titulop %}
+	{{ datos.nombre }}
+{% endblock %}
+{% block contenido %}
+	<img src="/media/{{ datos.portada }}"/>
+	<div id="contenido">
+		<p><label class="etiquetad"> Género: </label>{{ datos.genero }}</p>
+		<p><label class="etiquetad"> Sub géneros: </label>{{ datos.sub_genero }}</p>
+		<p><label class="etiquetad"> Online: </label>{{ datos.online }}</p>
+		<p><label class="etiquetad"> Campaña: </label>{{ datos.campana }}</p>
+		<p><label class="etiquetad"> Fecha de Salida: </label>{{ datos.fecha_de_salida }}</p>
+		<p><label class="etiquetad"> Plataformas: </label>
+		{% for pla in datos.plataforma.all %}
+			{{ pla.nombre }}
+		{% endfor %}
+		</p>
+		<p><label class="etiquetad"> Desarrollador: </label>{{ datos.desarrollador }}</p>
+		<p><label class="etiquetad"> Distribuidor: </label>{{ datos.distribuidor }}</p>
+	</div>
+
+	<a href="{% url 'videojuego' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+{% endblock %}
