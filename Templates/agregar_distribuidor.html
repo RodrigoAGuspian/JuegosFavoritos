@@ -9,8 +9,8 @@
 	<form action="" method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
 	{{ formulario.as_p }}
-	<input id="enviar" type="submit" name="Agregar Distribuidor"/>
+	<a class="waves-effect waves-teal btn boton"><input id="enviar" type="submit" name="Agregar Distribuidor"/></a>
 	</form>
-	<a href="{% url 'distribuidor' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+	<a href="{% url 'distribuidor' %}"class="waves-effect waves-teal btn boton right"><input type="submit" id="regresar" value ="Regresar"/></a>
 
 {% endblock %}

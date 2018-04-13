@@ -9,8 +9,8 @@
 	<form action="" method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
 	{{ formulario.as_p }}
-	<input id="enviar" type="submit" name="Agregar Plataforma"/>
+	<a class="waves-effect waves-teal btn boton"><input id="enviar" type="submit" name="Agregar Plataforma"/></a>
 	</form>
-	<a href="{% url 'plataforma' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+	<a href="{% url 'plataforma' %}" class="waves-effect waves-teal btn boton right"><input type="submit" id="regresar" value ="Regresar"/></a>
 
 {% endblock %}

@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/agregar.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css' %}"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/agregar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/agregarv.css' %}"/>
+	
 	{% block estilosp %}
 
 	{% endblock %}
@@ -14,17 +18,54 @@
 		{% endblock %}
 	</title>
 </head>
-<body>
+<body id="fondo">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	if (!window.jQuery) { document.write('<script src="bin/jquery-3.2.1.min.js"><\/script>'); }
+    </script>
+    <script>  
+    	var elem = document.querySelector('select');
+  		var instance = M.FormSelect.init(elem, options);
+
+  		// Or with jQuery
+
+		$(document).ready(function(){
+			$('select').formSelect();	
+		});
+  	</script>
+  	<script src="http://materializecss.com/js/init.js"></script>
+  	<div id="cuerpo" class="row pad_15">
 		<header>
 			{% block titulop %}
 
 			{% endblock %}
 		</header>
-		<div id="caja_formulario">
+		<div class="container">
+			
+		<div class="row">
+			<div class="col s12 l6 offset-l3">
 			{% block contenido %}
 			
 			{% endblock%}
-		</div>
+			</div>
 
+		</div>
+		</div>
+	
+	
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/mijs.js' %}"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			setInterval(cambiarFondo, 20000);// 5 segundos
+			}
+			fondoActual = 0;
+			imagenes = ["{%static 'fondos/halo.jpg' %}", "{%static 'fondos/control_nes.jpg' %}", "{%static 'fondos/fondo_mario_12.png' %}", "{%static 'fondos/forza_motorsport_6.jpg' %}", "{%static 'fondos/grand_theft_auto_v.jpg' %}","{%static 'fondos/master_chief.jpg' %}","{%static 'fondos/mortal_combat.jpg' %}","{%static 'fondos/sub_zero.jpg' %}","{%static 'fondos/the_witcher.jpg' %}","{%static 'fondos/tomb_raider.jpg' %}"];
+			function cambiarFondo() {
+			document.body.style.backgroundImage = "url(" + imagenes[++fondoActual % imagenes.length] + ")";
+			}
+
+	</script>
+	</div>
 </body>
 </html>	

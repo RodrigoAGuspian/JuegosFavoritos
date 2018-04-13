@@ -1,7 +1,10 @@
 .titulo{
+	font-weight: bold;
+	text-shadow: 0 0 25px white, 0 0 25px black ;
+	background-color: rgb(255,255,255, 0.15);
+}
+.titulo p{
 	margin-left: 10%;
-	color: #0096D2;
-	text-shadow: 2px 2px #94C0D2;
 }
 
 .listap{
@@ -12,19 +15,33 @@
 
 }
 .titulov{
-	background: linear-gradient(to bottom, rgba(0,178,168,1), rgba(255,255,255,1));
+	background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.5));
 	font-weight: bold;
+	text-shadow: 0 0 25px white, 0 0 25px black ;
 }
+
 .contenidov{
-	background: linear-gradient(to top, rgba(18,121,251,1), rgba(255,255,255,1));
+	background: linear-gradient(to top, rgba(255,255,255,0.2), rgba(0,0,0,0.5));
 	text-align: center;
+	text-shadow: 0 0 25px black, 0 0 10px blue ;
+	
+}
+.contenidov a:link, a:visited, a:active{
+	color: white;
 }
 .detalles{
 	color: #2F08C1;
 }
-#agregar{
-	margin: 0% 0% 1% 82.4%;
+.agregar{
+	background-color: blue !important;
+	margin-bottom: 0.5%;
 }
+
+.agregar:hover{	
+	background-color: rgb(0,0,200,1) !important;
+}
+
 img{
 	width: 100px;
 }
+

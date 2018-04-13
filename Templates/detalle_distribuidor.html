@@ -10,5 +10,8 @@
 {% endblock %}
 {% block contenido %}
 	<img src="/media/{{ datos.logo }}"/>
-	<a href="{% url 'videojuego' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+	
+	<a href="{% url 'modificar_distribuidor' id_dis=datos.id %}" id="modificar" class="btn waves-effect waves-light">Modificar</a>
+	<a href="{% url 'eliminar_distribuidor' id_dis=datos.id %}" id="eliminar" class="btn waves-effect waves-light">Eliminar</a>
+	<a href="{% url 'distribuidor' %}" id="regresar" class="btn waves-effect waves-light">Regresar</a>
 {% endblock %}

@@ -18,5 +18,18 @@ urlpatterns = [
     path('agregar_desarrollador/', vista_agregar_desarrollador,name= 'agregar_desarrollador'),
     path('agregar_distribuidor/', vista_agregar_distribuidor,name= 'agregar_distribuidor'),
     path('agregar_plataforma/', vista_agregar_plataforma,name= 'agregar_plataforma'),
+    path('modificar_videojuego/<int:id_v>/', vista_modificar_videojuego,name= 'modificar_videojuego'),
+    path('modificar_genero/<int:id_g>/', vista_modificar_genero,name= 'modificar_genero'),
+    path('modificar_desarrollador/<int:id_des>/', vista_modificar_desarrollador,name= 'modificar_desarrollador'),
+    path('modificar_distribuidor/<int:id_dis>/', vista_modificar_distribuidor,name= 'modificar_distribuidor'),
+    path('modificar_plataforma/<int:id_pla>/', vista_modificar_plataforma,name= 'modificar_plataforma'),
+    path('eliminar_videojuego/<int:id_v>/', vista_eliminar_videojuego,name= 'eliminar_videojuego'),
+    path('eliminar_genero/<int:id_g>/', vista_eliminar_genero,name= 'eliminar_genero'),
+    path('eliminar_desarrollador/<int:id_des>/', vista_eliminar_desarrollador,name= 'eliminar_desarrollador'),
+    path('eliminar_distribuidor/<int:id_dis>/', vista_eliminar_distribuidor,name= 'eliminar_distribuidor'),
+    path('eliminar_plataforma/<int:id_pla>/', vista_eliminar_plataforma,name= 'eliminar_plataforma'),
+    path('login/', vista_login, name='login'),
+    path('logout/', vista_logout, name='logout'),
+    path('registrar/', vista_registro, name='registrar'),
     
 ]

@@ -1,5 +1,5 @@
 body{
-	margin: 1% ; 
+	margin: 0 ; 
 	background: linear-gradient(to top, rgba(0,0,200,1), rgba(255,255,255,1));
 	background-attachment:fixed;
 }
@@ -20,13 +20,24 @@ header{
 }
 #regresar{
 	position: absolute;
-	font-size: 36px ;
 	bottom: 0; 
 	right: 0;
 }
-#regresar a{
+#modificar{
+	position: absolute;
+	bottom: 80%;
+	right: 10%;
+}
+#modificar a{
 	color: ;
 }
+#eliminar{
+	position: absolute;
+	bottom: 80%;
+	right: 2%;
+}
+
+
 .etiquetad{
 	font-size: 120%;
 	color: #2F08C1;

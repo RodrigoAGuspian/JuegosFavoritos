@@ -6,11 +6,29 @@
 {% endblock %}
 
 {% block contenido %}
+
 	<form action="" method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
+
 	{{ formulario.as_p }}
-	<input id="enviar" type="submit" name="Agregar Videojuego"/>
+	<p>
+      <label>
+        {{ formulario.online }}
+        <span>Online</span>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        {{ formulario.campana }}
+        <span>Campaña</span>
+      </label>
+    </p>
+	
+	<a class="waves-effect waves-blue btn boton"><input class="white-text text-darken-2" id="enviar" type="submit" name="Agregar Videojuego"/></a>
 	</form>
-	<a href="{% url 'videojuego' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+	<a href="{% url 'videojuego' %}" class="waves-effect waves-blue btn boton right"><input class="white-text text-darken-2" type="submit" id="regresar" value ="Regresar"/></a>
+	
+
 
 {% endblock %}

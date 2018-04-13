@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block titulo %}
+	Registro
+{% endblock %}
+{% block estilosp %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+{% endblock %}
+{% block titulop %}
+	<h1 class="center">Registro</h1>
+{% endblock %}
+{% block contenido %}
+	<h2> {{ msj }} </h2>
+	<form action="" method="POST" enctype="miltipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+		<a class="waves-effect waves-teal btn boton"><input type="submit" value="Registrar"></a>
+	</form>
+{% endblock %}

@@ -10,8 +10,11 @@
 {% endblock %}
 {% block contenido %}
 	<div id="contenido">
+		<h3><p><label class="etiquetad"> </label>{{ datos.descripcion }}</p></h3>
 		<p><label class="etiquetad"> Descripción: </label>{{ datos.descripcion }}</p>
 	</div>
 
-	<a href="{% url 'videojuego' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+	<a href="{% url 'modificar_genero' id_g=datos.id %}" id="modificar" class="btn waves-effect waves-light">Modificar</a>
+	<a href="{% url 'eliminar_genero' id_g=datos.id %}" id="eliminar" class="btn waves-effect waves-light">Eliminar</a>
+	<a href="{% url 'genero' %}" id="regresar" class="btn waves-effect waves-light">Regresar</a>
 {% endblock %}

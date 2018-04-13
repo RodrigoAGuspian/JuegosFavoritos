@@ -1,0 +1,16 @@
+{% extends 'agregar.html' %}
+{% load staticfiles %}
+
+{% block titulo %}
+	Modificar Plataforma
+{% endblock %}
+
+{% block contenido %}
+	<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{ formulario.as_p }}
+	<input id="enviar" type="submit" name="Modificar Plataforma"/>
+	</form>
+	<a href="{% url 'plataforma' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+
+{% endblock %}

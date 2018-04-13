@@ -12,6 +12,7 @@
 	<div id="contenido">
 		<p><label class="etiquetad"> Empresa: </label>{{ datos.empresa }}</p>
 	</div>
-
-	<a href="{% url 'videojuego' %}"><input type="submit" id="regresar" value ="Regresar"/></a>
+	<a href="{% url 'modificar_plataforma' id_pla=datos.id %}" id="modificar" class="btn waves-effect waves-light">Modificar</a>
+	<a href="{% url 'eliminar_plataforma' id_pla=datos.id %}" id="eliminar" class="btn waves-effect waves-light">Eliminar</a>
+	<a href="{% url 'plataforma' %}" id="regresar" class="btn waves-effect waves-light">Regresar</a>
 {% endblock %}
